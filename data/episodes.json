@@ -1,0 +1,31 @@
+{
+  "episodes": [
+    {
+      "number": "Episode 01",
+      "title": "The Cheque",
+      "verdict": "A contribution is a gift. A budget line is a vote.",
+      "link_label": "Struggling with this one? → The Budget Builder",
+      "link_url": "/toolkit/",
+      "video_url": "",
+      "date": "2026-07-01"
+    },
+    {
+      "number": "Episode 02",
+      "title": "The Plus One War",
+      "verdict": "The guest list has two owners. Everyone else is a lobbyist.",
+      "link_label": "Struggling with this one? → Family Conversations",
+      "link_url": "/toolkit/",
+      "video_url": "",
+      "date": "2026-07-15"
+    },
+    {
+      "number": "Episode 03",
+      "title": "The Spreadsheet at 4am",
+      "verdict": "Coming soon.",
+      "link_label": "Be first to watch → Join the list",
+      "link_url": "/#capture",
+      "video_url": "",
+      "date": ""
+    }
+  ]
+}

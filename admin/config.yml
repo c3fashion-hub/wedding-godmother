@@ -1,0 +1,31 @@
+backend:
+  name: github
+  repo: YOUR-GITHUB-USERNAME/wedding-godmother   # <- change this after Step 2
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+site_url: https://the-wedding-godmother.netlify.app
+logo_url: https://the-wedding-godmother.netlify.app/assets/cover-sm.jpg
+
+collections:
+  - name: "content"
+    label: "Site Content"
+    files:
+      - file: "data/episodes.json"
+        label: "Tales from the Aisle — Episodes"
+        name: "episodes"
+        fields:
+          - label: "Episodes"
+            name: "episodes"
+            widget: "list"
+            summary: "{{fields.number}} — {{fields.title}}"
+            fields:
+              - { label: "Episode number (e.g. Episode 04)", name: "number", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Verdict (the Godmother's one-liner, no quote marks needed)", name: "verdict", widget: "string" }
+              - { label: "Link label (e.g. Struggling with this one? → The Budget Builder)", name: "link_label", widget: "string", required: false }
+              - { label: "Link URL (e.g. /toolkit/)", name: "link_url", widget: "string", required: false, default: "/toolkit/" }
+              - { label: "Video URL (TikTok/Instagram/YouTube link — leave blank if not live yet)", name: "video_url", widget: "string", required: false }
+              - { label: "Publish date (YYYY-MM-DD — newest shows first)", name: "date", widget: "string", required: false }
