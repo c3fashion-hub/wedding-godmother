@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: YOUR-GITHUB-USERNAME/wedding-godmother   # <- change this after Step 2
+  repo: c3fashion-hub/wedding-godmother   # <- change this after Step 2
   branch: main
 
 media_folder: "assets/uploads"
