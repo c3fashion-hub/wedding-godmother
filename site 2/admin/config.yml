@@ -1,0 +1,45 @@
+backend:
+  name: github
+  repo: YOUR-GITHUB-USERNAME/wedding-godmother   # <- change this to match your repo
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+site_url: https://the-wedding-godmother.netlify.app
+logo_url: https://the-wedding-godmother.netlify.app/assets/cover-sm.jpg
+
+collections:
+  - name: "content"
+    label: "Site Content"
+    files:
+      - file: "data/episodes.json"
+        label: "Tales from the Aisle — Episodes"
+        name: "episodes"
+        fields:
+          - label: "Episodes"
+            name: "episodes"
+            widget: "list"
+            summary: "{{fields.number}} — {{fields.title}}"
+            fields:
+              - { label: "Episode number (e.g. Episode 04)", name: "number", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Verdict (the Godmother's one-liner, no quote marks needed)", name: "verdict", widget: "string" }
+              - { label: "Link label (e.g. Struggling with this one? → The Budget Builder)", name: "link_label", widget: "string", required: false }
+              - { label: "Link URL (e.g. /toolkit/)", name: "link_url", widget: "string", required: false, default: "/toolkit/" }
+              - { label: "Video URL (TikTok/Instagram/YouTube link — leave blank if not live yet)", name: "video_url", widget: "string", required: false }
+              - { label: "Publish date (YYYY-MM-DD — newest shows first)", name: "date", widget: "string", required: false }
+
+      - file: "data/site-content.json"
+        label: "Site Settings (offers, pricing, contact)"
+        name: "site_settings"
+        fields:
+          - { label: "Announcement bar — main text", name: "announcement_text", widget: "string", hint: "The red bar at the top of every page" }
+          - { label: "Announcement bar — link text", name: "announcement_link_text", widget: "string" }
+          - { label: "Circle offer badge (on the homepage door card)", name: "circle_badge", widget: "string" }
+          - { label: "Circle current price", name: "circle_price", widget: "string" }
+          - { label: "Circle price shown as struck-through", name: "circle_price_old", widget: "string" }
+          - { label: "Circle page — label under the header", name: "circle_page_label", widget: "string" }
+          - { label: "Circle page — waitlist heading", name: "circle_waitlist_heading", widget: "string" }
+          - { label: "Circle page — waitlist description", name: "circle_waitlist_lead", widget: "text" }
+          - { label: "Contact email (About page)", name: "contact_email", widget: "string" }
