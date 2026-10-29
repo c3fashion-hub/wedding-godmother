@@ -790,3 +790,28 @@ footer .label { color: rgba(20,18,16,0.5); }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* Anchor scroll offset so sticky nav never covers the jump target */
+#capture, #doors, #watch, #book, #waitlist {
+  scroll-margin-top: 90px;
+}
+
+@media (max-width: 900px) {
+  #capture, #doors, #watch, #book, #waitlist {
+    scroll-margin-top: 70px;
+  }
+}
+
+/* Mobile fit: stop the page being wider than a phone screen */
+.capture-form input { min-width: 0; }
+@media (max-width: 900px) {
+  nav { grid-template-columns: auto minmax(0, 1fr) auto; }
+  .nav-mark { min-width: 0; white-space: normal; line-height: 1.4; text-align: center; }
+  .capture-form { max-width: 100%; }
+  .capture-btn { padding-left: 16px; padding-right: 16px; white-space: nowrap; }
+  [class*="capture"] > div, .content-split > div { min-width: 0; }
+}
+@media (max-width: 420px) {
+  .nav-mark { font-size: 0.72rem; letter-spacing: 0.12em; }
+  .nav-cta { padding: 9px 10px; letter-spacing: 0.1em; }
+}
